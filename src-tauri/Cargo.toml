@@ -1,6 +1,6 @@
 [package]
 name = "toodoolist"
-version = "0.1.0"
+version = "1.0.0"
 description = "Generate project task drafts from a local path or GitHub URL."
 authors = ["toDooList"]
 edition = "2021"
