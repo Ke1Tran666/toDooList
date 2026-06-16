@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "toDooList",
+  "version": "0.1.0",
+  "identifier": "com.hungtran.todoolist",
+  "build": {
+    "beforeDevCommand": "corepack yarn dev",
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeBuildCommand": "corepack yarn build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "toDooList",
+        "width": 1180,
+        "height": 780,
+        "minWidth": 860,
+        "minHeight": 620
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all"
+  }
+}
