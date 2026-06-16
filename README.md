@@ -1,40 +1,92 @@
 # toDooList
 
-Ứng dụng desktop giúp phân tích dự án từ đường dẫn local hoặc URL GitHub, sau đó tạo danh sách task để theo dõi công việc. App hỗ trợ import/export task bằng JSON/XLSX, lập kế hoạch theo quỹ thời gian và đánh dấu task hoàn thành/chưa hoàn thành.
+🇻🇳 Tiếng Việt | 🇺🇸 English
 
-## Phiên bản
+---
 
-v1.0.0
+# 🇻🇳 Giới thiệu
 
-## Tác giả
+toDooList là ứng dụng desktop giúp phân tích dự án từ đường dẫn local hoặc URL GitHub, sau đó tạo danh sách task để theo dõi công việc.
 
-KeiTran666
+Ứng dụng hỗ trợ:
 
-## Repository
+* Phân tích cấu trúc dự án
+* Sinh task tự động
+* Lập kế hoạch theo quỹ thời gian
+* Theo dõi tiến độ thực hiện
+* Import/Export JSON và Excel
 
-GitHub: [Ke1Tran666/toDooList](https://github.com/Ke1Tran666/toDooList)
+---
 
-## Công nghệ
+# 🇺🇸 Introduction
 
-- Tauri
-- React JavaScript
-- Vite
-- Tailwind CSS
-- Yarn qua Corepack
-- Rust/Cargo
-- XLSX để đọc và ghi file Excel
+toDooList is a desktop application that analyzes projects from a local directory or GitHub repository URL and automatically generates task lists for project planning and tracking.
 
-## Yêu cầu cài đặt
+Features include:
 
-Trước khi chạy dự án, máy cần có:
+* Project structure analysis
+* Automatic task generation
+* Time-based planning
+* Progress tracking
+* JSON and Excel import/export
 
-- Node.js
-- Yarn qua Corepack
-- Rust và Cargo
-- Git
-- Visual Studio Build Tools 2022 trên Windows
+---
 
-Kiểm tra nhanh:
+# 📦 Version
+
+**v1.0.0**
+
+---
+
+# 👨‍💻 Author
+
+**KeiTran666**
+
+---
+
+# 🔗 Repository
+
+https://github.com/Ke1Tran666/toDooList
+
+---
+
+# 🛠️ Technologies
+
+* Tauri
+* React
+* Vite
+* Tailwind CSS
+* Yarn (Corepack)
+* Rust / Cargo
+* XLSX
+
+---
+
+# 📋 Requirements
+
+## 🇻🇳 Yêu cầu
+
+Trước khi chạy source code cần cài đặt:
+
+* Node.js
+* Yarn (Corepack)
+* Rust
+* Cargo
+* Git
+* Visual Studio Build Tools 2022 (Windows)
+
+## 🇺🇸 Requirements
+
+Before running the source code, install:
+
+* Node.js
+* Yarn (Corepack)
+* Rust
+* Cargo
+* Git
+* Visual Studio Build Tools 2022 (Windows)
+
+Check versions:
 
 ```powershell
 node -v
@@ -44,121 +96,149 @@ cargo --version
 git --version
 ```
 
-## Tải source code từ GitHub
+---
 
-Bạn có 2 cách tải source.
+# 🚀 Installation
 
-### Cách 1: Clone bằng Git
+## Clone Repository
 
 ```powershell
 git clone https://github.com/Ke1Tran666/toDooList.git
 cd toDooList
+
 corepack enable
 corepack yarn install
 ```
 
-### Cách 2: Tải file nén ZIP từ GitHub
+---
 
-1. Mở repository: [https://github.com/Ke1Tran666/toDooList](https://github.com/Ke1Tran666/toDooList)
-2. Bấm nút **Code**.
-3. Chọn **Download ZIP**.
-4. Giải nén file ZIP vừa tải.
-5. Mở PowerShell trong thư mục đã giải nén.
-6. Cài dependency:
+# ▶️ Development
 
-```powershell
-corepack enable
-corepack yarn install
-```
-
-## Chạy khi phát triển
-
-Chạy app desktop bằng Tauri:
+## Run Desktop App
 
 ```powershell
 corepack yarn tauri dev
 ```
 
-Nếu chỉ muốn chạy giao diện web bằng Vite:
+## Run Web UI Only
 
 ```powershell
 corepack yarn dev
 ```
 
-## Build và đóng gói v1
+---
 
-Build phần frontend:
+# 🏗️ Build
+
+Build frontend:
 
 ```powershell
 corepack yarn build
 ```
 
-Đóng gói ứng dụng desktop Tauri:
+Build desktop installer:
 
 ```powershell
 corepack yarn tauri build
 ```
 
-Sau khi build Tauri, file cài đặt thường nằm trong:
+Generated files:
 
 ```text
-src-tauri\target\release\bundle
+src-tauri/target/release/bundle
 ```
 
-## File nén v1
-
-Repo có kèm thư mục `release/` chứa file nén tất cả trong một của bản v1:
+Examples:
 
 ```text
-release\toDooList-v1.zip
+src-tauri/target/release/bundle/msi/
+src-tauri/target/release/bundle/nsis/
 ```
 
-Khi tải file này:
+---
 
-1. Tải `release/toDooList-v1.zip` từ GitHub.
-2. Giải nén `toDooList-v1.zip`.
-3. Mở thư mục vừa giải nén.
-4. Nếu muốn cài app desktop, mở thư mục `windows` và chạy file setup.
-5. Nếu muốn chạy source, mở PowerShell trong thư mục `source`.
-6. Chạy:
+# 💻 Windows Installer
 
-```powershell
-corepack enable
-corepack yarn install
-corepack yarn tauri dev
-```
+## 🇻🇳
 
-File nén v1 gồm:
+Tải file `.msi` hoặc `.exe` từ GitHub Releases và chạy trình cài đặt.
 
-- `source/`: source code sạch, không gồm `node_modules`, `dist`, `src-tauri/target`.
-- `windows/`: bộ cài Windows được build từ Tauri v1.
+Người dùng không cần:
 
-Nếu muốn tự tạo lại file nén source:
+* Node.js
+* Yarn
+* Rust
+* Cargo
+* Visual Studio
 
-```powershell
-powershell -ExecutionPolicy Bypass -Command "Compress-Archive -Path .\* -DestinationPath ..\toDooList-v1-source.zip -Force"
-```
+Chỉ cần:
 
-Không nên nén các thư mục build/cache như `node_modules`, `dist`, `src-tauri\target`.
+* Windows 10 hoặc Windows 11
+* Microsoft Edge WebView2 Runtime
 
-## Tính năng hiện tại
+## 🇺🇸
 
-- Nhận diện file local, thư mục local và URL GitHub.
-- Quét thư mục local từ backend Tauri.
-- Hiển thị cây thư mục dự án.
-- Sinh task nháp theo rule/template từ tín hiệu dự án.
-- Chỉnh sửa, thêm và xóa task thủ công.
-- Bấm vào task để xem hướng dẫn thực hiện, tiêu chí hoàn thành và chú thích.
-- Đánh dấu task hoàn thành hoặc chưa hoàn thành.
-- Ước lượng độ khó và thời gian thực hiện cho từng task.
-- Lập kế hoạch task theo quỹ thời gian, ví dụ 3 giờ.
-- Import task từ `.json`, `.xlsx` hoặc `.xls`.
-- Export toàn bộ task ra `.json` hoặc `.xlsx`.
-- Khi import rồi export lại, app tạo file cập nhật để tiếp tục theo dõi.
-- Có cài đặt giao diện sáng/tối và ngôn ngữ Việt/Anh.
+Download the `.msi` or `.exe` installer from GitHub Releases and run the installer.
 
-## Ghi chú
+End users do NOT need:
 
-- Project dùng Yarn qua Corepack, không dùng `package-lock.json`.
-- Không cần API key AI cho phiên bản hiện tại.
-- Kết nối GitHub API và tạo GitHub Issue thật có thể được bổ sung ở giai đoạn sau.
+* Node.js
+* Yarn
+* Rust
+* Cargo
+* Visual Studio
+
+Required:
+
+* Windows 10 or Windows 11
+* Microsoft Edge WebView2 Runtime
+
+---
+
+# ✨ Features
+
+## 🇻🇳
+
+* Phân tích thư mục local và URL GitHub
+* Hiển thị cây thư mục dự án
+* Sinh task tự động
+* Thêm, sửa, xoá task
+* Đánh dấu hoàn thành/chưa hoàn thành
+* Ước lượng độ khó và thời gian thực hiện
+* Lập kế hoạch theo quỹ thời gian
+* Import JSON/XLS/XLSX
+* Export JSON/XLSX
+* Giao diện sáng/tối
+* Hỗ trợ tiếng Việt và tiếng Anh
+
+## 🇺🇸
+
+* Analyze local folders and GitHub repositories
+* Project tree visualization
+* Automatic task generation
+* Create, edit, and delete tasks
+* Task completion tracking
+* Difficulty and time estimation
+* Time-based planning
+* JSON/XLS/XLSX import
+* JSON/XLSX export
+* Light/Dark theme
+* Vietnamese and English support
+
+---
+
+# 📝 Notes
+
+## 🇻🇳
+
+* Sử dụng Yarn thông qua Corepack.
+* Không sử dụng package-lock.json.
+* Chưa yêu cầu API key AI.
+* GitHub API integration sẽ được bổ sung trong tương lai.
+
+## 🇺🇸
+
+* Uses Yarn through Corepack.
+* Does not use package-lock.json.
+* No AI API key is required in the current version.
+* GitHub API integration may be added in future releases.
